@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class dummyHealth : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class dummyHealth : MonoBehaviour
     public float dummyMaxHealth = 10000f;
     public float dummyCurrentHealth = 0f;
     public float timeSuffering; 
+    public Animator goblinAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +24,10 @@ public class dummyHealth : MonoBehaviour
     {   
         if(dummyCurrentHealth < 0.05f)
         {
-            Destroy(this.gameObject);
+            NavMeshAgent goblinAgent = GetComponent<NavMeshAgent>();
+            goblinAgent.SetDestination(this.gameObject.transform.position);
+            goblinAnim.SetBool("isDead", true);
+            Destroy(this.gameObject, 3f);
         }
         slider.value = dummyCurrentHealth;
     }

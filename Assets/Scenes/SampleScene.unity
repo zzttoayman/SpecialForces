@@ -437,12 +437,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435750008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.48, y: 1.18, z: 26.33}
+  m_LocalPosition: {x: 36.99, y: 1.18, z: 23.53}
   m_LocalScale: {x: 3.1268, y: 2, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 113383703}
-  - {fileID: 1636885518}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -902,7 +901,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -921,7 +920,7 @@ MonoBehaviour:
   goblinSpawnPoint: {fileID: 113383702}
   numGoblinsPerWave: 4
   goblinPrefab: {fileID: 1113847005}
-  waveInterval: 3.5
+  waveInterval: 15
 --- !u!4 &716070017
 Transform:
   m_ObjectHideFlags: 0
@@ -930,7 +929,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716070015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.916628, y: 5.950663, z: 34.178642}
+  m_LocalPosition: {x: 25.916628, y: 5.950663, z: 34.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1258,6 +1257,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1066992991841724118, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
+      propertyPath: dummyMaxHealth
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 1095481983610466798, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1297,6 +1300,10 @@ PrefabInstance:
     - target: {fileID: 2253941517500596448, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457729970537009915, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2764030443014527969, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
       propertyPath: m_Layer
@@ -1484,15 +1491,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8429525425210607745, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.361458
+      value: -23.84
       objectReference: {fileID: 0}
     - target: {fileID: 8429525425210607745, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.06
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8429525425210607745, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 38.036907
+      value: -4.49
       objectReference: {fileID: 0}
     - target: {fileID: 8429525425210607745, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2014,6 +2021,7 @@ MonoBehaviour:
   dummyMaxHealth: 10000
   dummyCurrentHealth: 0
   timeSuffering: 0
+  goblinAnim: {fileID: 0}
 --- !u!65 &1454869875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2291,37 +2299,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544545508}
   m_CullTransparentMesh: 1
---- !u!1 &1636885517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1636885518}
-  m_Layer: 0
-  m_Name: SpawnPoint2
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1636885518
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636885517}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 435750012}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1668601246
 GameObject:
   m_ObjectHideFlags: 0

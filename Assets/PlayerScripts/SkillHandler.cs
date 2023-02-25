@@ -103,6 +103,7 @@ public class SkillHandler : MonoBehaviour
                     float distance = direction.magnitude;
                     if (distance < fartRange)
                     {
+                        dummy = col.gameObject.GetComponent<dummyHealth>();
                         Debug.Log("Enemy hit!");
                         dummy.timeSuffering += Time.deltaTime;
                         dummy.dummyCurrentHealth -= Mathf.Pow(2f,(1f + dummy.timeSuffering));
