@@ -18,14 +18,10 @@ public class dummyHealth : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if(slider.value < 0.05f)
-        {
-            slider.value = 10 * Time.deltaTime;
-        }
+    {   
         if(dummyCurrentHealth < 0.05f)
         {
-            dummyCurrentHealth = dummyMaxHealth;
+            Destroy(this.gameObject);
         }
         slider.value = dummyCurrentHealth;
     }

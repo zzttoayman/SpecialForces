@@ -23,6 +23,6 @@ public class TowerShoot : MonoBehaviour
         lastPlayerPos = currentPlayerPos;
         Vector3 playerNewPos = currentPlayerPos - lastPlayerPos;
 
-        if(Physics.SphereCast(transform.position, towerFov, playerDir, out RaycastHit hit, maxTargetDist, playerMask)){}    
+        //if(Physics.SphereCast(transform.position, towerFov, playerDir, out RaycastHit hit, maxTargetDist, playerMask)){}    
     }
 }
