@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject player; 
     public float maxHealth = 100f;
     public float currentHealth;
+    public SkillHandler handler;
 
     public Slider slider;
 
@@ -22,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth < 30f)
         {
             Destroy(player);
+            Destroy(handler.fartParticles);
         }
     }
 

@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113383702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -181,15 +181,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228932693}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 1.7, z: -15}
+  m_LocalRotation: {x: 0.054957885, y: 0.039766826, z: -0.05760088, w: 0.99603236}
+  m_LocalPosition: {x: -15.25, y: 1.22, z: -16.84}
   m_LocalScale: {x: 20, y: 0.2, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1836766794}
   m_Father: {fileID: 1989777415}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.549, y: 4.207, z: -6.379}
 --- !u!64 &228932696
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -898,6 +898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 716070017}
   - component: {fileID: 716070016}
+  - component: {fileID: 716070018}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -936,6 +937,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &716070018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716070015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f776b0f397ea9f94ca18675d568357fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: GoblinDeath
+    source: {fileID: 0}
+    clip: {fileID: 8300000, guid: 20cf712e375832d4486f66047ecbd8f9, type: 3}
+    volume: 1
+    pitch: 1
 --- !u!4 &738332238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4451163944284705514, guid: d2df3387be582384a9c50d18d03d9b30, type: 3}
@@ -1189,7 +1208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021779866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.512287, y: -17.42069, z: 72.38849}
+  m_LocalPosition: {x: 23.512287, y: 1.41, z: 72.38849}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1214,6 +1233,107 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1447866, z: 0.08208237}
   m_Center: {x: 0, y: 0.07046087, z: 0.0053737643}
+--- !u!95 &1113847015 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2457729970537009915, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
+  m_PrefabInstance: {fileID: 1156117804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1113847017
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113847005}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 20cf712e375832d4486f66047ecbd8f9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1156117804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1257,6 +1377,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1066992991841724118, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 1113847017}
+    - target: {fileID: 1066992991841724118, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
+      propertyPath: goblinAnim
+      value: 
+      objectReference: {fileID: 1113847015}
     - target: {fileID: 1066992991841724118, guid: a765934b1b23c96498d6234e336ecf04, type: 3}
       propertyPath: dummyMaxHealth
       value: 10000
@@ -2022,6 +2150,7 @@ MonoBehaviour:
   dummyCurrentHealth: 0
   timeSuffering: 0
   goblinAnim: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!65 &1454869875
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2258,7 +2387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.7377014, y: -0.17259979}
+  m_AnchoredPosition: {x: 4.737732, y: -0.17259979}
   m_SizeDelta: {x: -209.8653, y: -75.2088}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1544545510

@@ -11,10 +11,13 @@ public class dummyHealth : MonoBehaviour
     public float dummyCurrentHealth = 0f;
     public float timeSuffering; 
     public Animator goblinAnim;
+    public AudioSource deathSound;
+    public NavMeshAgent goblinAgent;
 
     // Start is called before the first frame update
     void Start()
     {
+        goblinAgent = GetComponent<NavMeshAgent>();
         SetMaxHealth(dummyMaxHealth);
         dummyCurrentHealth = dummyMaxHealth;
     }
@@ -22,14 +25,24 @@ public class dummyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        if(dummyCurrentHealth < 0.05f)
+        if(dummyCurrentHealth <= 295f)
         {
-            NavMeshAgent goblinAgent = GetComponent<NavMeshAgent>();
-            goblinAgent.SetDestination(this.gameObject.transform.position);
-            goblinAnim.SetBool("isDead", true);
-            Destroy(this.gameObject, 3f);
+            dummyCurrentHealth = 0f;
+            Die();
         }
         slider.value = dummyCurrentHealth;
+    }
+
+    public void Die()
+    {
+        goblinAnim.SetBool("isDead", true);
+        if(goblinAnim.GetBool("isDead"))
+        {
+            Canvas goblinCanvas = gameObject.GetComponentInChildren<Canvas>();
+            Destroy(goblinCanvas);
+        }
+        goblinAgent.isStopped = true;
+        Destroy(this.gameObject, 8f);
     }
 
     public void TakeDamage(float damage)
